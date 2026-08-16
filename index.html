@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>K&amp;S Snacks — Crunchy Delight for All of Us</title>
+<meta name="description" content="K&S Snacks: peanuts, chin chin, popcorn, zobo and kunu, roasted and packed fresh. Order on WhatsApp, pay by transfer, wholesale and retail." />
+<meta name="keywords" content="snacks, drinks, peanut, chin chin, popcorn, zobo, kunu, Nigerian snacks" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🥜%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --indigo-950:#141b2e;
+    --indigo-900:#1b2440;
+    --indigo-800:#26325a;
+    --gold-500:#e8a33d;
+    --gold-600:#cf8a24;
+    --rust-600:#c1502e;
+    --cream-50:#fffcf6;
+    --cream-100:#fbf3e6;
+    --cream-200:#f2e4cd;
+    --ink-900:#241c15;
+    --ink-600:#5b4f42;
+    --ink-400:#8a7d6c;
+
+    --display:'Fraunces', Georgia, serif;
+    --body:'Work Sans', system-ui, -apple-system, sans-serif;
+    --mono:'Space Mono', 'Courier New', monospace;
+
+    --radius:14px;
+    --shadow-card: 0 14px 30px -14px rgba(20,27,46,0.35);
+    --shadow-soft: 0 6px 18px -10px rgba(20,27,46,0.25);
+    --container: 1160px;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
+  }
+
+  body{
+    margin:0;
+    font-family:var(--body);
+    color:var(--ink-900);
+    background:var(--cream-50);
+    line-height:1.5;
+  }
+
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  h1,h2,h3,h4{ font-family:var(--display); margin:0; font-weight:700; letter-spacing:-0.01em; }
+  p{ margin:0; }
+  ul{ margin:0; padding:0; list-style:none; }
+  button{ font-family:inherit; cursor:pointer; }
+  input, button{ font-size:1rem; }
+
+  .wrap{ max-width:var(--container); margin:0 auto; padding-inline:24px; }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:0.72rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--gold-600);
+  }
+  .section-title{ font-size:clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem); color:var(--ink-900); }
+  .section-lede{ color:var(--ink-600); max-width:56ch; margin-top:10px; }
+  .section-head{ margin-bottom:36px; }
+
+  :focus-visible{ outline:3px solid var(--gold-500); outline-offset:3px; }
+
+  /* ============ SKIP LINK ============ */
+  .skip-link{
+    position:absolute; left:-999px; top:0; background:var(--gold-500); color:var(--ink-900);
+    padding:10px 16px; z-index:200; border-radius:0 0 8px 0; font-weight:600;
+  }
+  .skip-link:focus{ left:0; }
+
+  /* ============ NAV ============ */
+  header.site-header{
+    position:sticky; top:0; z-index:100;
+    background:var(--indigo-950);
+    border-bottom:1px solid rgba(232,163,61,0.25);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-block:14px;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--display); font-weight:900; font-size:1.35rem;
+    color:var(--cream-50); text-decoration:none;
+  }
+  .brand-mark{
+    width:38px; height:38px; border-radius:50%;
+    background:linear-gradient(155deg, var(--gold-500), var(--rust-600));
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-weight:700; color:var(--indigo-950); font-size:0.85rem;
+  }
+  .brand small{ display:block; font-family:var(--mono); font-size:0.6rem; letter-spacing:0.14em; color:var(--gold-500); font-weight:400; }
+
+  nav.primary-nav ul{ display:flex; gap:4px; }
+  nav.primary-nav a{
+    text-decoration:none; color:var(--cream-200); font-weight:500; font-size:0.92rem;
+    padding:10px 14px; border-radius:999px; transition:background .18s ease, color .18s ease;
+    display:inline-block;
+  }
+  nav.primary-nav a:hover{ background:rgba(232,163,61,0.14); color:var(--gold-500); }
+
+  .nav-actions{ display:flex; align-items:center; gap:10px; }
+  .cart-btn{
+    position:relative; background:transparent; border:1.5px solid rgba(251,243,230,0.35);
+    color:var(--cream-50); padding:9px 16px; border-radius:999px; font-weight:600; font-size:0.88rem;
+    display:flex; align-items:center; gap:8px; transition:border-color .18s ease, background .18s ease;
+  }
+  .cart-btn:hover{ border-color:var(--gold-500); background:rgba(232,163,61,0.1); }
+  .cart-count{
+    background:var(--rust-600); color:#fff; font-family:var(--mono); font-size:0.7rem;
+    min-width:19px; height:19px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    padding:0 4px;
+  }
+  .menu-toggle{
+    display:none; background:none; border:none; color:var(--cream-50); padding:8px; border-radius:8px;
+  }
+  .menu-toggle svg{ width:24px; height:24px; }
+
+  @media (max-width: 860px){
+    nav.primary-nav{
+      position:absolute; top:100%; left:0; right:0; background:var(--indigo-950);
+      border-bottom:1px solid rgba(232,163,61,0.25);
+      max-height:0; overflow:hidden; transition:max-height .28s ease;
+    }
+    nav.primary-nav.open{ max-height:320px; }
+    nav.primary-nav ul{ flex-direction:column; padding:8px 20px 18px; gap:2px; }
+    nav.primary-nav a{ padding:12px 10px; display:block; }
+    .menu-toggle{ display:block; }
+  }
+
+  /* ============ HERO ============ */
+  .hero{
+    background:
+      radial-gradient(circle at 82% -10%, rgba(232,163,61,0.22), transparent 55%),
+      var(--indigo-950);
+    color:var(--cream-50);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px;
+    align-items:center; padding-block:72px 96px;
+  }
+  .hero-copy .eyebrow{ color:var(--gold-500); }
+  .hero-copy h1{
+    font-size:clamp(2.4rem, 1.9rem + 2.6vw, 3.7rem);
+    line-height:1.03; margin-top:14px; color:var(--cream-50);
+  }
+  .hero-copy h1 em{ font-style:italic; color:var(--gold-500); }
+  .hero-copy p.lede{
+    margin-top:20px; color:var(--cream-200); max-width:46ch; font-size:1.05rem;
+  }
+  .hero-cta{ display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; }
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:13px 26px; border-radius:999px; font-weight:600; font-size:0.95rem;
+    border:1.5px solid transparent; text-decoration:none; transition:transform .16s ease, box-shadow .16s ease, background .16s ease;
+  }
+  .btn:active{ transform:translateY(1px); }
+  .btn-gold{ background:var(--gold-500); color:var(--indigo-950); box-shadow:var(--shadow-soft); }
+  .btn-gold:hover{ background:var(--gold-600); }
+  .btn-ghost{ border-color:rgba(251,243,230,0.4); color:var(--cream-50); }
+  .btn-ghost:hover{ border-color:var(--gold-500); color:var(--gold-500); }
+  .btn-dark{ background:var(--indigo-950); color:var(--cream-50); }
+  .btn-dark:hover{ background:var(--indigo-800); }
+  .btn-block{ width:100%; }
+  .btn[disabled]{ opacity:0.45; cursor:not-allowed; }
+
+  .hero-stats{ display:flex; gap:28px; margin-top:40px; flex-wrap:wrap; }
+  .hero-stats div{ font-family:var(--mono); }
+  .hero-stats strong{ display:block; font-size:1.5rem; color:var(--gold-500); }
+  .hero-stats span{ font-size:0.72rem; color:var(--cream-200); letter-spacing:0.05em; }
+
+  .hero-photo{ position:relative; }
+  .hero-photo-frame{
+    border-radius:20px; overflow:hidden; border:1px solid rgba(232,163,61,0.35);
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.55);
+    transform:rotate(1.4deg);
+  }
+  .hero-photo-frame img{ width:100%; height:420px; object-fit:cover; }
+  .hero-badge{
+    position:absolute; bottom:-22px; left:-22px;
+    background:var(--cream-50); color:var(--ink-900);
+    border-radius:14px; padding:14px 18px; box-shadow:var(--shadow-card);
+    transform:rotate(-3deg);
+    max-width:210px;
+  }
+  .hero-badge .eyebrow{ color:var(--rust-600); }
+  .hero-badge p{ font-family:var(--display); font-weight:600; font-size:0.95rem; margin-top:4px; }
+
+  @media (max-width: 900px){
+    .hero .wrap{ grid-template-columns:1fr; padding-block:52px 64px; }
+    .hero-photo{ order:-1; }
+    .hero-photo-frame{ transform:none; }
+    .hero-photo-frame img{ height:300px; }
+    .hero-badge{ display:none; }
+  }
+
+  /* woven scallop divider — signature motif */
+  .scallop-divider{
+    height:26px;
+    background-image: radial-gradient(circle at 10px 0, transparent 12px, var(--cream-50) 13px);
+    background-size:24px 26px;
+    background-repeat:repeat-x;
+    background-color:var(--indigo-950);
+  }
+
+  /* ============ MARQUEE ============ */
+  .ticker{
+    background:var(--gold-500); color:var(--indigo-950);
+    overflow:hidden; white-space:nowrap; border-bottom:1px solid rgba(20,27,46,0.15);
+  }
+  .ticker-track{
+    display:inline-flex; gap:40px; padding-block:10px;
+    animation:scroll-left 26s linear infinite;
+    font-family:var(--mono); font-size:0.78rem; letter-spacing:0.04em; font-weight:700;
+  }
+  .ticker-track span{ display:inline-flex; align-items:center; gap:10px; }
+  @keyframes scroll-left{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+
+  /* ============ WHY US ============ */
+  .why{ padding-block:80px; }
+  .why-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+  .why-card{
+    background:var(--cream-100); border-radius:var(--radius); padding:28px 26px;
+    border:1px solid var(--cream-200);
+  }
+  .why-card .icon{
+    width:44px; height:44px; border-radius:12px; background:var(--indigo-950);
+    display:flex; align-items:center; justify-content:center; font-size:1.3rem; margin-bottom:16px;
+  }
+  .why-card h3{ font-size:1.1rem; }
+  .why-card p{ color:var(--ink-600); margin-top:8px; font-size:0.95rem; }
+  @media (max-width:760px){ .why-grid{ grid-template-columns:1fr; } }
+
+  /* ============ PRODUCTS ============ */
+  .products{ padding-block:20px 90px; background:var(--cream-50); }
+  .product-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:26px;
+  }
+  .card{
+    position:relative;
+    background:var(--cream-100);
+    border-radius:var(--radius);
+    border:1px solid var(--cream-200);
+    overflow:visible;
+    display:flex; flex-direction:column;
+    box-shadow:var(--shadow-soft);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover{ transform:translateY(-5px); box-shadow:var(--shadow-card); }
+
+  .card-media{
+    height:190px; border-radius:var(--radius) var(--radius) 0 0; overflow:hidden;
+    background:var(--indigo-950);
+  }
+  .card-media img{ width:100%; height:100%; object-fit:cover; }
+  .card-media.no-photo{
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(160deg, var(--indigo-900), var(--indigo-950));
+  }
+  .card-media.no-photo svg{ width:78px; height:78px; }
+
+  /* signature: rotated market price-tag */
+  .price-tag{
+    position:absolute; top:-14px; right:16px;
+    background:var(--rust-600); color:var(--cream-50);
+    font-family:var(--mono); font-size:0.8rem; font-weight:700;
+    padding:7px 12px 7px 16px; border-radius:4px;
+    transform:rotate(4deg);
+    box-shadow:0 8px 16px -6px rgba(193,80,46,0.55);
+  }
+  .price-tag::before{
+    content:''; position:absolute; left:-5px; top:50%; transform:translateY(-50%);
+    width:10px; height:10px; background:var(--cream-50); border-radius:50%;
+    border:2px solid var(--rust-600);
+  }
+
+  .card-body{ padding:20px 20px 22px; display:flex; flex-direction:column; gap:10px; flex:1; }
+  .card-body h3{ font-size:1.2rem; }
+  .card-body p.desc{ color:var(--ink-600); font-size:0.92rem; flex:1; }
+  .qty-row{ display:flex; align-items:center; justify-content:space-between; margin-top:6px; gap:10px; }
+  .stepper{ display:flex; align-items:center; border:1px solid var(--cream-200); border-radius:999px; overflow:hidden; }
+  .stepper button{
+    background:var(--cream-50); border:none; width:32px; height:32px; font-size:1rem; font-weight:700;
+    color:var(--indigo-950);
+  }
+  .stepper button:hover{ background:var(--gold-500); }
+  .stepper output{
+    width:32px; text-align:center; font-family:var(--mono); font-size:0.9rem; font-weight:700;
+  }
+  .add-btn{
+    background:var(--indigo-950); color:var(--cream-50); border:none;
+    padding:10px 18px; border-radius:999px; font-weight:600; font-size:0.85rem;
+    transition:background .18s ease;
+    white-space:nowrap;
+  }
+  .add-btn:hover{ background:var(--rust-600); }
+  .add-btn.added{ background:var(--gold-500); color:var(--indigo-950); }
+
+  /* ============ GALLERY ============ */
+  .gallery{ background:var(--indigo-950); padding-block:80px; color:var(--cream-50); }
+  .gallery .section-head .section-title{ color:var(--cream-50); }
+  .gallery .section-head .section-lede{ color:var(--cream-200); }
+  .gallery-scroll{
+    display:flex; gap:18px; overflow-x:auto; padding-bottom:12px; scroll-snap-type:x mandatory;
+  }
+  .gallery-scroll::-webkit-scrollbar{ height:8px; }
+  .gallery-scroll::-webkit-scrollbar-thumb{ background:var(--gold-500); border-radius:8px; }
+  .gallery-item{
+    flex:0 0 220px; scroll-snap-align:start; border-radius:12px; overflow:hidden;
+    position:relative; height:260px; border:1px solid rgba(232,163,61,0.2);
+  }
+  .gallery-item img{ width:100%; height:100%; object-fit:cover; transition:transform .35s ease; }
+  .gallery-item:hover img{ transform:scale(1.08); }
+  .gallery-item figcaption{
+    position:absolute; left:0; right:0; bottom:0;
+    background:linear-gradient(0deg, rgba(20,27,46,0.92), transparent);
+    padding:26px 12px 12px; font-size:0.8rem; font-weight:500;
+  }
+
+  /* ============ ORDER / CART ============ */
+  .order{ padding-block:90px; background:var(--cream-100); }
+  .order-grid{ display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
+
+  .panel{
+    background:var(--cream-50); border-radius:var(--radius); border:1px solid var(--cream-200);
+    padding:30px 28px; box-shadow:var(--shadow-soft);
+  }
+  .panel h3{ font-size:1.25rem; margin-bottom:6px; }
+  .panel .sub{ color:var(--ink-600); font-size:0.9rem; margin-bottom:22px; }
+
+  .field{ margin-bottom:18px; }
+  .field label{ display:block; font-weight:600; font-size:0.86rem; margin-bottom:6px; }
+  .field input{
+    width:100%; padding:12px 14px; border:1.5px solid var(--cream-200); border-radius:10px;
+    background:var(--cream-50); transition:border-color .16s ease;
+  }
+  .field input:focus{ border-color:var(--gold-500); outline:none; }
+  .field .hint{ font-size:0.78rem; color:var(--ink-400); margin-top:4px; }
+
+  .cart-list{ margin-bottom:16px; }
+  .cart-empty{ color:var(--ink-400); font-size:0.92rem; padding:22px 0; text-align:center; border:1.5px dashed var(--cream-200); border-radius:10px; }
+  .cart-row{
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+    padding:12px 0; border-bottom:1px solid var(--cream-200);
+    font-size:0.92rem;
+  }
+  .cart-row:last-child{ border-bottom:none; }
+  .cart-row .name{ font-weight:600; }
+  .cart-row .meta{ color:var(--ink-400); font-size:0.8rem; }
+  .cart-row .amount{ font-family:var(--mono); font-weight:700; }
+  .cart-row .remove{ background:none; border:none; color:var(--rust-600); font-size:0.78rem; text-decoration:underline; padding:0; }
+
+  .total-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:16px; margin-top:6px; border-top:2px solid var(--indigo-950);
+    font-family:var(--mono); font-weight:700; font-size:1.1rem;
+  }
+
+  .bank-box{
+    margin-top:22px; background:var(--indigo-950); color:var(--cream-50);
+    border-radius:12px; padding:20px; font-size:0.9rem;
+  }
+  .bank-box .eyebrow{ margin-bottom:8px; display:block; }
+  .bank-box dl{ display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin-top:8px; }
+  .bank-box dt{ color:var(--gold-500); font-family:var(--mono); font-size:0.75rem; align-self:center; }
+  .bank-box dd{ margin:0; font-weight:600; }
+
+  .confirm-row{ display:flex; align-items:flex-start; gap:10px; margin-top:18px; font-size:0.86rem; }
+  .confirm-row input{ margin-top:3px; width:16px; height:16px; accent-color:var(--gold-500); }
+
+  .order-actions{ display:flex; gap:12px; margin-top:20px; flex-wrap:wrap; }
+  .order-actions .btn{ flex:1; }
+
+  #order-status{ margin-top:14px; font-size:0.86rem; font-weight:600; min-height:1.2em; }
+  #order-status.ok{ color:#3f7d4a; }
+  #order-status.err{ color:var(--rust-600); }
+
+  @media (max-width:860px){ .order-grid{ grid-template-columns:1fr; } }
+
+  /* ============ FOOTER ============ */
+  footer{ background:var(--indigo-950); color:var(--cream-200); padding-block:56px 30px; }
+  .footer-grid{ display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:40px; }
+  .footer-grid h4{ color:var(--cream-50); font-size:1rem; margin-bottom:14px; }
+  .footer-grid p, .footer-grid a{ font-size:0.88rem; color:var(--cream-200); text-decoration:none; }
+  .footer-grid ul li{ margin-bottom:8px; }
+  .footer-grid a:hover{ color:var(--gold-500); }
+  .footer-brand{ display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .footer-bottom{
+    margin-top:44px; padding-top:22px; border-top:1px solid rgba(251,243,230,0.14);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-size:0.78rem; color:var(--ink-400);
+  }
+  @media (max-width:760px){ .footer-grid{ grid-template-columns:1fr; } }
+
+  /* ============ TOAST ============ */
+  .toast{
+    position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(120%);
+    background:var(--indigo-950); color:var(--cream-50); padding:14px 22px; border-radius:999px;
+    font-size:0.9rem; font-weight:600; box-shadow:var(--shadow-card); z-index:300;
+    transition:transform .3s ease; display:flex; align-items:center; gap:10px;
+  }
+  .toast.show{ transform:translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top">
+      <span class="brand-mark">K&amp;S</span>
+      <span>K&amp;S Snacks<small>BEST IN VALUE</small></span>
+    </a>
+    <nav class="primary-nav" id="primary-nav">
+      <ul>
+        <li><a href="#peanut">Peanut</a></li>
+        <li><a href="#chinchin">Chin Chin</a></li>
+        <li><a href="#popcorn">Popcorn</a></li>
+        <li><a href="#zobo">Zobo</a></li>
+        <li><a href="#KUNU">Kunu</a></li>
+        <li><a href="#Potato chips">Potato chips</a></li>
+        <li><a href="#Peanut brittle">Peanut brittle</a></li>
+        <li><a href="#Assorted biscuits">Assorted biscuits</a></li>
+        <li><a href="#order">Order</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cart-nav-btn" aria-label="View your order">
+        🧺 Order <span class="cart-count" id="cart-count">0</span>
+      </button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">Roasted fresh &middot; Lagos, Nigeria</span>
+        <h1>Crunchy delight, <em>for all of us</em>.</h1>
+        <p class="lede">Peanuts, chin chin, popcorn and chilled zobo &amp; kunu — made in small batches and sold by the tray, the jar or the bottle. Wholesale and retail, delivered to your door.</p>
+        <div class="hero-cta">
+          <a href="#order" class="btn btn-gold">Start an order</a>
+          <a href="#products" class="btn btn-ghost">See the menu</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>Various</strong><span>SIGNATURE SNACKS</span></div>
+          <div><strong>100%</strong><span>NATURAL INGREDIENTS</span></div>
+          <div><strong>24H</strong><span>ORDER TURNAROUND</span></div>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="hero-photo-frame">
+          <img src="file_00000000c5e88246af0fc0fa0e48fd1c.png" alt="K&S Snacks products: a bottle of chilled zobo, a jar of plantain chips, and a plate of freshly fried plantain chips" loading="eager">
+        </div>
+        <div class="hero-badge">
+          <span class="eyebrow">Straight from the stall</span>
+          <p>Every batch fried, roasted and bottled by hand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="scallop-divider" aria-hidden="true"></div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>🥜 PEANUT</span><span>🍪 CHIN CHIN</span><span>🍿 POPCORN</span><span>🧃 ZOBO</span><span>🥤 KUNU</span>
+      <span>🥜 PEANUT</span><span>🍪 CHIN CHIN</span><span>🍿 POPCORN</span><span>🧃 ZOBO</span><span>🥤 KUNU</span>
+    </div>
+  </div>
+
+  <!-- WHY US -->
+  <section class="why">
+    <div class="wrap">
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="icon">🌿</div>
+          <h3>Natural, no shortcuts</h3>
+          <p>Just groundnuts, plantain, maize and hibiscus — roasted and fried the way it's always been done.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">📦</div>
+          <h3>Wholesale &amp; retail</h3>
+          <p>Buy a single jar for the house or stock up for your shop. Bulk pricing available on request.</p>
+        </div>
+        <div class="why-card">
+          <div class="icon">💬</div>
+          <h3>Order on WhatsApp</h3>
+          <p>Build your basket below and send it straight to us — no account, no app to download.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products" id="products">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The menu</span>
+        <h2 class="section-title">Available products</h2>
+        <p class="section-lede">Always in stock and ready to ship.Customize your quantity and build your perfect snack bundle below.</p>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+
+        <article class="card" id="peanut" data-name="Peanut" data-price="1500" data-unit="tray">
+          <span class="price-tag">₦1,500</span>
+          <div class="card-media"><img src="coated-peanuts-c.jpg" alt="A bowl of crunchy roasted peanuts"></div>
+          <div class="card-body">
+            <h3>Peanut</h3>
+            <p class="desc">Crunchy roasted groundnuts, lightly salted. Sold by the tray.</p>
+            <div class="qty-row">
+              <div class="stepper" data-stepper>
+                <button type="button" data-action="dec" aria-label="Decrease quantity">−</button>
+                <output>1</output>
+                <button type="button" data-action="inc" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="add-btn" data-action="add">Add · ₦1,500</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" id="chinchin" data-name="Chin Chin" data-price="2000" data-unit="jar">
+          <span class="price-tag">₦2,000</span>
+          <div class="card-media"><img src="Top 30 Popular Nigerian Snacks You Need to Try 🍰🥟 - 9jakitchen-Comfort Through Food.jfif" alt="Golden fried chin chin pieces"></div>
+          <div class="card-body">
+            <h3>Chin Chin</h3>
+            <p class="desc">Crisp, golden and lightly sweet chin chin, cut small and fried till crunchy. Sold by the jar.</p>
+            <div class="qty-row">
+              <div class="stepper" data-stepper>
+                <button type="button" data-action="dec" aria-label="Decrease quantity">−</button>
+                <output>1</output>
+                <button type="button" data-action="inc" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="add-btn" data-action="add">Add · ₦2,000</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" id="popcorn" data-name="Popcorn" data-price="1000" data-unit="pack">
+          <span class="price-tag">₦1,000</span>
+          <div class="card-media"><img src="popcorn-bowl.jpg" alt="A wooden bowl of caramel popcorn"></div>
+          <div class="card-body">
+            <h3>Popcorn</h3>
+            <p class="desc">Caramel-glazed popcorn, popped fresh to order. Sold by the pack.</p>
+            <div class="qty-row">
+              <div class="stepper" data-stepper>
+                <button type="button" data-action="dec" aria-label="Decrease quantity">−</button>
+                <output>1</output>
+                <button type="button" data-action="inc" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="add-btn" data-action="add">Add · ₦1,000</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" id="zobo" data-name="Zobo" data-price="800" data-unit="bottle">
+          <span class="price-tag">₦800</span>
+          <div class="card-media"><img src="zobo-drink.jpg" alt="A glass of chilled red zobo drink with cinnamon and cloves"></div>
+          <div class="card-body">
+            <h3>Zobo</h3>
+            <p class="desc">Chilled hibiscus drink, spiced with ginger, cloves and cinnamon. Sold by the bottle.</p>
+            <div class="qty-row">
+              <div class="stepper" data-stepper>
+                <button type="button" data-action="dec" aria-label="Decrease quantity">−</button>
+                <output>1</output>
+                <button type="button" data-action="inc" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="add-btn" data-action="add">Add · ₦800</button>
+            </div>
+          </div>
+        </article>
+        <article class="card" id="Potato chips" data-name="Potato chips" data-price="800" data-unit="bottle">
+          <span class="price-tag">₦800</span>
+          <div class="card-media"><img src="chips-dark-bg.jpg" alt="A glass of chilled red zobo drink with cinnamon and cloves"></div>
+          <div class="card-body">
+            <h3>Potato chips</h3>
+            <p class="desc">Thinly sliced potatoes deep-fried to a golden crunch, heavily dusted with smoky barbecue, sharp onion, and savory spices, sold by the bottle.</p>
+            <div class="qty-row">
+              <div class="stepper" data-stepper>
+                <button type="button" data-action="dec" aria-label="Decrease quantity">−</button>
+                <output>1</output>
+                <button type="button" data-action="inc" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="add-btn" data-action="add">Add · ₦800</button>
+            </div>
+          </div>
+        </article>
+        <article class="card" id="Peanut brittle" data-name="Peanut brittle" data-price="800" data-unit="bottle">
+          <span class="price-tag">₦800</span>
+          <div class="card-media"><img src="peanut-brittle-a.jpg" alt="A glass of chilled red zobo drink with cinnamon and cloves"></div>
+          <div class="card-body">
+            <h3>peanut-brittle</h3>
+            <p class="desc">Crunchy roasted peanuts embedded in a hard, golden-brown caramelized sugar candy, broken into bite-sized shards and sold by the box.</p>
+            <div class="qty-row">
+              <div class="stepper" data-stepper>
+                <button type="button" data-action="dec" aria-label="Decrease quantity">−</button>
+                <output>1</output>
+                <button type="button" data-action="inc" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="add-btn" data-action="add">Add · ₦800</button>
+            </div>
+          </div>
+        </article>
+        </article>
+        <article class="card" id="KUNU" data-name="KUNU" data-price="800" data-unit="bottle">
+          <span class="price-tag">₦800</span>
+          <div class="card-media"><img src="download.jfif" alt="Creamy fermented millet milk, naturally sweetened with sweet potatoes and dates, given a fiery kick with fresh ginger and cloves, sold by the bottle."></div>
+          <div class="card-body">
+            <h3>KUNU</h3>
+            <p class="desc">Creamy fermented millet milk, naturally sweetened with sweet potatoes and dates, given a fiery kick with fresh ginger and cloves, sold by the bottle.</p>
+            <div class="qty-row">
+              <div class="stepper" data-stepper>
+                <button type="button" data-action="dec" aria-label="Decrease quantity">−</button>
+                <output>1</output>
+                <button type="button" data-action="inc" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="add-btn" data-action="add">Add · ₦800</button>
+            </div>
+          </div>
+        </article>
+        <article class="card" id="Assorted biscuits" data-name="Assorted biscuits" data-price="800" data-unit="bottle">
+          <span class="price-tag">₦800</span>
+          <div class="card-media"><img src="biscuits-assorted.jpg" alt="Crisp baked dough golden-browned to perfection, lightly sweetened and infused with rich butter vanilla aroma, sold by the pack."></div>
+          <div class="card-body">
+            <h3>Assorted biscuits</h3>
+            <p class="desc">Crisp baked dough golden-browned to perfection, lightly sweetened and infused with rich butter vanilla aroma, sold by the pack.</p>
+            <div class="qty-row">
+              <div class="stepper" data-stepper>
+                <button type="button" data-action="dec" aria-label="Decrease quantity">−</button>
+                <output>1</output>
+                <button type="button" data-action="inc" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="add-btn" data-action="add">Add · ₦800</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">From the snack counter</span>
+        <h2 class="section-title">More treats we carry</h2>
+        <p class="section-lede">A look at other bites in rotation — ask us what's fresh this week.</p>
+      </div>
+      <div class="gallery-scroll">
+        <figure class="gallery-item"><img src="popcorn-cinema.jpg" alt="Two people sharing striped popcorn buckets at the cinema" loading="lazy"><figcaption>Movie-night popcorn</figcaption></figure>
+        <figure class="gallery-item"><img src="cookies-mixed.jpg" alt="An assortment of chocolate and peanut cookies" loading="lazy"><figcaption>Assorted cookies</figcaption></figure>
+        <figure class="gallery-item"><img src="chips-wood-bowl.jpg" alt="Golden potato chips in a white bowl" loading="lazy"><figcaption>Golden potato chips</figcaption></figure>
+        <figure class="gallery-item"><img src="cookie-single.jpg" alt="A single chocolate chip cookie" loading="lazy"><figcaption>Chocolate chip cookie</figcaption></figure>
+        <figure class="gallery-item"><img src="plantain-chips.jpg" alt="A bowl of sweet plantain chips" loading="lazy"><figcaption>Sweet plantain chips</figcaption></figure>
+        <figure class="gallery-item"><img src="coated-peanuts-b.jpg" alt="Spice-coated peanuts spilling from a bowl" loading="lazy"><figcaption>Spiced coated peanuts</figcaption></figure>
+        <figure class="gallery-item"><img src="chips-white-bowl.jpg" alt="Potato chips piled in a wooden bowl" loading="lazy"><figcaption>Chips, wooden bowl</figcaption></figure>
+        <figure class="gallery-item"><img src="coated-peanuts-a.jpg" alt="A bowl of chili coated peanuts" loading="lazy"><figcaption>Chili coated peanuts</figcaption></figure>
+        <figure class="gallery-item"><img src="peanut-brittle-a.jpg" alt="Broken pieces of peanut brittle on a plate" loading="lazy"><figcaption>Peanut brittle</figcaption></figure>
+        <figure class="gallery-item"><img src="popcorn-white-bowl.jpg" alt="Popcorn in a white bowl lit dramatically" loading="lazy"><figcaption>Popcorn, white bowl</figcaption></figure>
+        <figure class="gallery-item"><img src="coated-peanuts-c.jpg" alt="Honey-roasted peanuts in a dark bowl" loading="lazy"><figcaption>Honey-roasted peanuts</figcaption></figure>
+        <figure class="gallery-item"><img src="peanut-brittle-b.jpg" alt="Close-up of glossy peanut brittle" loading="lazy"><figcaption>Peanut brittle, close-up</figcaption></figure>
+        <figure class="gallery-item"><img src="chips-dark-bg.jpg" alt="Potato chips in a bowl against a dark background" loading="lazy"><figcaption>Chips, low light</figcaption></figure>
+        <figure class="gallery-item"><img src="biscuits-assorted.jpg" alt="An assortment of iced and sandwich biscuits" loading="lazy"><figcaption>Assorted biscuits</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER -->
+  <section class="order" id="order">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Checkout</span>
+        <h2 class="section-title">To place your order</h2>
+        <p class="section-lede">Add snacks above, confirm your details, then send your order straight to us on WhatsApp.</p>
+      </div>
+
+      <div class="order-grid">
+
+        <div class="panel">
+          <h3>Your details</h3>
+          <p class="sub">We'll use this to confirm your order and arrange delivery.</p>
+          <form id="details-form" novalidate>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="whatsapp">WhatsApp phone number</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="080..." autocomplete="tel" required>
+              <p class="hint">Required so we can confirm your order.</p>
+            </div>
+            <div class="field">
+              <label for="address">Delivery address</label>
+              <input type="text" id="address" name="address" placeholder="Street, area, city" autocomplete="street-address">
+            </div>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h3>Your order</h3>
+          <p class="sub" id="cart-subtitle">Review your selection and confirm your order.</p>
+
+          <div class="cart-list" id="cart-list">
+            <p class="cart-empty">Your basket is empty — add a snack from the menu above.</p>
+          </div>
+
+          <div class="total-row">
+            <span>Total</span>
+            <span id="cart-total">₦0</span>
+          </div>
+
+          <div class="bank-box">
+            <span class="eyebrow">Pay by transfer</span>
+            <dl>
+              <dt>Bank</dt><dd>First Bank</dd>
+              <dt>Acct No.</dt><dd>3068000061</dd>
+              <dt>Acct Name</dt><dd>K&amp;S Products</dd>
+            </dl>
+          </div>
+
+          <label class="confirm-row">
+            <input type="checkbox" id="confirm-transfer">
+            <span>I've made the transfer above (or will pay on delivery) and confirm the order details are correct.</span>
+          </label>
+
+          <div class="order-actions">
+            <button class="btn btn-dark" id="clear-cart-btn" type="button">Clear order</button>
+            <button class="btn btn-gold" id="checkout-btn" type="button" disabled>Send order on WhatsApp</button>
+          </div>
+          <p id="order-status" role="status"></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="brand-mark">K&amp;S</span>
+          <strong style="font-family:var(--display); font-size:1.15rem; color:var(--cream-50);">K&amp;S Snacks</strong>
+        </div>
+        <p>Tasty, crunchy &amp; natural snacks and drinks, made fresh — available wholesale and retail.</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#peanut">Peanut</a></li>
+          <li><a href="#chinchin">Chin Chin</a></li>
+          <li><a href="#popcorn">Popcorn</a></li>
+          <li><a href="#zobo">Zobo</a></li>
+          <li><a href="#kunu">Kunu</a></li>
+          <li><a href="#Potato chips">Potato chips</a></li>
+          <li><a href="#Peanut brittle">Peanut brittle</a></li>
+          <li><a href="#Assorted buiscuits">Assorted buiscuits</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+2347080038976">0708 003 8976</a></li>
+          <li><a href="https://wa.me/2347080038976" target="_blank" rel="noopener">Chat on WhatsApp</a></li>
+          <li>4 Prince Olayinka Oduola Close, off Kunle Martins</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> K&amp;S Snacks — Reg. No. 3584090</span>
+      <span>Best in value.</span>
+    </div>
+  </div>
+</footer>''
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Mobile nav ---------- */
+  var menuToggle = document.getElementById('menu-toggle');
+  var primaryNav = document.getElementById('primary-nav');
+  menuToggle.addEventListener('click', function(){
+    var isOpen = primaryNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  primaryNav.addEventListener('click', function(e){
+    if (e.target.tagName === 'A'){
+      primaryNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  /* ---------- Footer year ---------- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---------- Cart state ---------- */
+  var CART_KEY = 'ks_snacks_cart_v1';
+  var cart = {}; // { name: { name, price, unit, qty } }
+
+  function loadCart(){
+    try{
+      var raw = window.localStorage.getItem(CART_KEY);
+      if (raw) cart = JSON.parse(raw) || {};
+    }catch(err){ cart = {}; }
+  }
+  function saveCart(){
+    try{ window.localStorage.setItem(CART_KEY, JSON.stringify(cart)); }catch(err){ /* ignore */ }
+  }
+
+  var fmt = new Intl.NumberFormat('en-NG');
+  function money(n){ return '₦' + fmt.format(n); }
+
+  function cartCount(){
+    return Object.values(cart).reduce(function(sum, item){ return sum + item.qty; }, 0);
+  }
+  function cartTotal(){
+    return Object.values(cart).reduce(function(sum, item){ return sum + item.qty * item.price; }, 0);
+  }
+
+  var cartCountEl = document.getElementById('cart-count');
+  var cartListEl = document.getElementById('cart-list');
+  var cartTotalEl = document.getElementById('cart-total');
+  var cartSubtitleEl = document.getElementById('cart-subtitle');
+  var checkoutBtn = document.getElementById('checkout-btn');
+  var confirmCheckbox = document.getElementById('confirm-transfer');
+  var whatsappInput = document.getElementById('whatsapp');
+  var orderStatus = document.getElementById('order-status');
+
+  function renderCart(){
+    cartCountEl.textContent = cartCount();
+
+    var items = Object.values(cart);
+    if (items.length === 0){
+      cartListEl.innerHTML = '<p class="cart-empty">Your basket is empty — add a snack from the menu above.</p>';
+      cartSubtitleEl.textContent = 'Review your selection and confirm your order.';
+    } else {
+      cartSubtitleEl.textContent = items.length + ' item' + (items.length > 1 ? 's' : '') + ' in your basket.';
+      cartListEl.innerHTML = items.map(function(item){
+        return '' +
+          '<div class="cart-row" data-cart-row="' + item.name + '">' +
+            '<div>' +
+              '<div class="name">' + item.name + '</div>' +
+              '<div class="meta">' + item.qty + ' × ' + money(item.price) + ' per ' + item.unit + '</div>' +
+            '</div>' +
+            '<div style="display:flex; align-items:center; gap:12px;">' +
+              '<span class="amount">' + money(item.qty * item.price) + '</span>' +
+              '<button class="remove" type="button" data-remove="' + item.name + '">Remove</button>' +
+            '</div>' +
+          '</div>';
+      }).join('');
+    }
+    cartTotalEl.textContent = money(cartTotal());
+    updateCheckoutState();
+  }
+
+  function updateCheckoutState(){
+    var hasItems = cartCount() > 0;
+    var confirmed = confirmCheckbox.checked;
+    checkoutBtn.disabled = !(hasItems && confirmed);
+  }
+
+  cartListEl.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-remove]');
+    if (!btn) return;
+    delete cart[btn.getAttribute('data-remove')];
+    saveCart();
+    renderCart();
+  });
+
+  confirmCheckbox.addEventListener('change', updateCheckoutState);
+
+  /* ---------- Product cards ---------- */
+  document.querySelectorAll('.card[data-name]').forEach(function(card){
+    var name = card.getAttribute('data-name');
+    var price = parseInt(card.getAttribute('data-price'), 10);
+    var unit = card.getAttribute('data-unit');
+    var stepper = card.querySelector('[data-stepper]');
+    var output = stepper.querySelector('output');
+    var addBtn = card.querySelector('[data-action="add"]');
+    var qty = 1;
+
+    function renderQty(){
+      output.textContent = qty;
+      addBtn.textContent = 'Add · ' + money(qty * price);
+    }
+
+    stepper.addEventListener('click', function(e){
+      var action = e.target.getAttribute('data-action');
+      if (action === 'inc'){ qty = Math.min(qty + 1, 20); renderQty(); }
+      if (action === 'dec'){ qty = Math.max(qty - 1, 1); renderQty(); }
+    });
+
+    addBtn.addEventListener('click', function(){
+      if (cart[name]){
+        cart[name].qty += qty;
+      } else {
+        cart[name] = { name: name, price: price, unit: unit, qty: qty };
+      }
+      saveCart();
+      renderCart();
+      showToast(name + ' added to your order');
+      addBtn.classList.add('added');
+      setTimeout(function(){ addBtn.classList.remove('added'); }, 900);
+      qty = 1;
+      renderQty();
+    });
+
+    renderQty();
+  });
+
+  /* ---------- Clear cart ---------- */
+  document.getElementById('clear-cart-btn').addEventListener('click', function(){
+    cart = {};
+    saveCart();
+    renderCart();
+    orderStatus.textContent = '';
+    orderStatus.className = '';
+  });
+
+  /* ---------- Nav "view order" scroll ---------- */
+  document.getElementById('cart-nav-btn').addEventListener('click', function(){
+    document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  /* ---------- Toast ---------- */
+  var toastEl = document.getElementById('toast');
+  var toastTimer;
+  function showToast(message){
+    toastEl.textContent = message;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 2200);
+  }
+
+  /* ---------- Checkout: build WhatsApp order message ---------- */
+  var STORE_WHATSAPP = '2347080038976';
+
+  checkoutBtn.addEventListener('click', function(){
+    var items = Object.values(cart);
+    if (items.length === 0){
+      orderStatus.textContent = 'Add at least one item before sending your order.';
+      orderStatus.className = 'err';
+      return;
+    }
+    if (!whatsappInput.value.trim()){
+      orderStatus.textContent = 'Please enter your WhatsApp number so we can reach you.';
+      orderStatus.className = 'err';
+      whatsappInput.focus();
+      return;
+    }
+    if (!confirmCheckbox.checked){
+      orderStatus.textContent = 'Please confirm the checkbox before sending your order.';
+      orderStatus.className = 'err';
+      return;
+    }
+
+    var lines = items.map(function(item){
+      return '- ' + item.name + ' x' + item.qty + ' (' + money(item.price) + '/' + item.unit + ') = ' + money(item.qty * item.price);
+    });
+
+    var email = document.getElementById('email').value.trim();
+    var address = document.getElementById('address').value.trim();
+    var whatsapp = whatsappInput.value.trim();
+
+    var message = 'Hello K&S Snacks, I would like to order:%0A%0A' +
+      encodeURIComponent(lines.join('\n')) +
+      '%0A%0ATotal: ' + encodeURIComponent(money(cartTotal())) +
+      '%0A%0AMy WhatsApp: ' + encodeURIComponent(whatsapp) +
+      (email ? '%0AEmail: ' + encodeURIComponent(email) : '') +
+      (address ? '%0ADelivery address: ' + encodeURIComponent(address) : '');
+
+    var url = 'https://wa.me/' + STORE_WHATSAPP + '?text=' + message;
+    window.open(url, '_blank', 'noopener');
+
+    orderStatus.textContent = 'Opening WhatsApp with your order ready to send…';
+    orderStatus.className = 'ok';
+  });
+
+  /* ---------- Init ---------- */
+  loadCart();
+  renderCart();
+
+})();
+</script>
+
+</body>
+</html>
